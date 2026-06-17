@@ -18,6 +18,13 @@ class Settings(BaseSettings):
     # Per-run trained-model checkpoints live under {work_dir}/run_{id}/.
     work_dir: str = "./.runs"
 
+    # CORS allow-list for browsers calling ai directly (comma-separated origins).
+    cors_origins: str = "http://localhost:3000,https://llm.ragsof.dev"
+
+    @property
+    def cors_origin_list(self) -> list[str]:
+        return [o.strip() for o in self.cors_origins.split(",") if o.strip()]
+
     # Seed the group logins on startup so the app is usable out of the box.
     # Users group8..group16 share one password (classroom setup).
     seed_users: bool = True
