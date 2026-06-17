@@ -1,0 +1,36 @@
+[project]
+name = "ai"
+version = "0.1.0"
+description = "LLM fine-tuning playground — FastAPI training server (in-process trainer)"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.137.1",
+    "huggingface-hub>=1.19.0",
+    "torch>=2.12.0",
+    "numpy>=2.1.0",
+    # --- web / api / db ---
+    "sqlalchemy[asyncio]>=2.0.36",
+    "aiosqlite>=0.20.0",
+    "pydantic-settings>=2.6.0",
+    "pyjwt>=2.10.0",
+    "bcrypt>=4.2.0",
+    # --- real training (slice "expand"; the dummy trainer needs none of these) ---
+    # "transformers>=4.46", "trl>=0.12", "peft>=0.13", "datasets>=3.1", "accelerate>=1.1",
+]
+
+[dependency-groups]
+dev = ["ruff>=0.8.0"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+# B008: Depends()/Header() in argument defaults is the idiomatic FastAPI pattern.
+ignore = ["B008"]
+
+[tool.ruff.lint.per-file-ignores]
+# Dataset corpora are long literal text lines, not code.
+"app/datasets.py" = ["E501"]

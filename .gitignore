@@ -1,0 +1,61 @@
+# ---- Secrets / local env ----
+.env
+.env.local
+.env.*.local
+*/.env
+*/.env.local
+# keep the committed templates
+!.env.example
+!*/.env.example
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+*~
+
+# ============================================================
+# ai/  (Python, uv, FastAPI)
+# ============================================================
+ai/.venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# in-process run artifacts (config snapshots, logs, checkpoints)
+ai/.runs/
+ai/outputs/
+ai/checkpoints/
+
+# HuggingFace / model caches
+ai/.cache/
+.hf_cache/
+
+# ============================================================
+# ui/  (Next.js, pnpm)
+# ============================================================
+ui/node_modules/
+node_modules/
+ui/.next/
+ui/out/
+ui/build/
+ui/.turbo/
+ui/coverage/
+ui/.yarn/
+ui/.yarnrc.yml
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# ---- Local databases / dumps ----
+*.sqlite
+*.sqlite3
+pgdata/
