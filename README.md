@@ -118,7 +118,9 @@ Please cite this work as:
 ```text
 Reddy, Avinash and Bedi, Amrit Singh, "LLM Training Playground: An Interactive Tool for Understanding and Experimenting with LLM Training Workflows", 2026.
 ```
+## BibTex Entry
 
+```
 @misc{reddy2026llmtrainingplayground,
   author       = {Reddy, Avinash and Bedi, Amrit Singh},
   title        = {LLM Training Playground: An Interactive Tool for Understanding and Experimenting with LLM Training Workflows},
@@ -126,3 +128,5 @@ Reddy, Avinash and Bedi, Amrit Singh, "LLM Training Playground: An Interactive T
   howpublished = {\url{https://github.com/avinashreddydev/llm-training-playground}},
   note         = {GitHub repository}
 }
+
+```
