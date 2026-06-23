@@ -100,3 +100,29 @@ curl -s -X POST localhost:8000/runs/$RUN/generate -H "authorization: Bearer $TOK
 Slice 2 — not built yet. Will be a Next.js app that talks **only** to its own
 route handlers, which proxy to `ai` via the server-only `API_URL` env var. See
 `ui/.env.example`.
+
+
+## Deployment and Usage
+
+Anyone is welcome to deploy and use this project for their own experiments or applications.  
+If you choose to host it yourself, you are responsible for any infrastructure, API, GPU, or cloud costs associated with running it.
+
+This repository is intended as an open playground for learning, experimenting, and building with LLM training workflows.
+
+## Citation
+
+If you find this project useful in your research, teaching, or development work, please consider citing it.
+
+Please cite this work as:
+
+```text
+Reddy, Avinash and Bedi, Amrit Singh, "LLM Training Playground: An Interactive Tool for Understanding and Experimenting with LLM Training Workflows", 2026.
+```
+
+@misc{reddy2026llmtrainingplayground,
+  author       = {Reddy, Avinash and Bedi, Amrit Singh},
+  title        = {LLM Training Playground: An Interactive Tool for Understanding and Experimenting with LLM Training Workflows},
+  year         = {2026},
+  howpublished = {\url{https://github.com/avinashreddydev/llm-training-playground}},
+  note         = {GitHub repository}
+}
